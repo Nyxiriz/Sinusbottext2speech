@@ -1,0 +1,16 @@
+registerPlugin({
+    name: 'Speech Recognition Demo',
+    version: '2.0',
+    description: 'This is a simple script that will recognize the command "stop"',
+    author: 'Nyxiriz',
+    vars: [],
+    voiceCommands: ['stop']
+}, function(sinusbot, config) {
+    var audio = require('audio');
+    var event = require('event');
+    var engine = require('engine');
+    audio.setAudioReturnChannel(2); // this activates speech recognition
+    event.on('speech', function(ev) {
+        engine.log(ev.client.nick() + ' just said ' + ev.text);
+    });
+});
