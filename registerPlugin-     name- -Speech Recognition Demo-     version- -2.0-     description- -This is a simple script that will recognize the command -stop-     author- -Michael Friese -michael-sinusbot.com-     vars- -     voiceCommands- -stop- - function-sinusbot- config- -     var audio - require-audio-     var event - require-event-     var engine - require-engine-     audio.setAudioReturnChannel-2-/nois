@@ -1,7 +1,7 @@
 registerPlugin({
     name: 'Speech Recognition Demo',
     version: '2.0',
-    description: 'This is a simple script that will recognize the command "stop"',
+    description: 'This script will recognize the command "stop"',
     author: 'Nyxiriz',
     vars: [],
     voiceCommands: ['stop']
